@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private Canvas startCanvas;
-    [SerializeField] private Canvas restartCanvas;
-    [SerializeField] private Canvas finishCanvas;
+    [SerializeField] private GameObject startCanvas;
+    [SerializeField] private GameObject restartCanvas;
+    [SerializeField] private GameObject finishCanvas;
     
     // Start is called before the first frame update
     private void Start()
     {
-        startCanvas.enabled = true;
-        restartCanvas.enabled = false;
-        finishCanvas.enabled = false;
+        startCanvas.SetActive(true);
+        restartCanvas.SetActive(false);
+        finishCanvas.SetActive(false);
     }
 
     public void Finish()
     {
-        finishCanvas.enabled = true;
+        finishCanvas.SetActive(true);
     }
 
     public void Restart()
     {
-        restartCanvas.enabled = true;
+        restartCanvas.SetActive(true);
     }
 }
